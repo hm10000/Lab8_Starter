@@ -3,7 +3,7 @@ const { expect } = require("@jest/globals");
 describe('Basic user flow for Website', () => {
   // First, visit the lab 8 website
   beforeAll(async () => {
-    await page.goto('http://192.168.1.250:5500/index.html');
+    await page.goto('https://hm10000.github.io/Lab8_Starter/');
   });
 
   // Next, check to make sure that all 20 <product-item> elements have loaded
@@ -103,7 +103,7 @@ describe('Basic user flow for Website', () => {
     // Reload the page, then select all of the <product-item> elements, and check every
     // element to make sure that all of their buttons say "Remove from Cart".
     // Also check to make sure that #cart-count is still 20
-    await page.goto('http://192.168.1.250:5500/index.html')
+    await page.goto('https://hm10000.github.io/Lab8_Starter/')
     const prodItems = await page.$$('product-item');
 
     for(let i = 0; i < prodItems.length; i++) {
@@ -171,7 +171,7 @@ describe('Basic user flow for Website', () => {
     // is in the cart - do this by checking the text on the buttons so that they should say "Add to Cart".
     // Also check to make sure that #cart-count is still 0
 
-    await page.goto('http://192.168.1.250:5500/index.html')
+    await page.goto('https://hm10000.github.io/Lab8_Starter/')
 
     const prodItems = await page.$$('product-item');
 
